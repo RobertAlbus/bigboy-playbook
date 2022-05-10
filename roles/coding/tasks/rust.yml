@@ -1,0 +1,10 @@
+---
+- name: install rustup
+  become_user: root
+  pacman:
+    name:
+      - rustup
+- name: install rust stable
+  command: rustup install stable
+- name: set rust stable as default
+  command: rustup default stable
