@@ -4,4 +4,4 @@
   pacman:
     name:
       - thunar
-      - dtrx
+      - unzip

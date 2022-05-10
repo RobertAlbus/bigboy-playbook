@@ -4,5 +4,5 @@
   pacman:
     name:
       - discord
-      - slack-desktop
-      - signal-desktop-beta-bin
+      - signal-desktop
+      # - slack-desktop # cannot install AUR packages easily with ansible
