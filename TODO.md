@@ -4,7 +4,7 @@
 
 ### coding
 - node
-- rust/cargo/etc
+- rustup
 - vscode
 - neovim
 - docker

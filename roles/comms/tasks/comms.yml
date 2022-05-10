@@ -1,0 +1,8 @@
+---
+- name: install communications packages
+  become_user: root
+  pacman:
+    name:
+      - discord
+      - slack-desktop
+      - signal-desktop-beta-bin

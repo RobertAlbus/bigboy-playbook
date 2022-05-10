@@ -1,0 +1,7 @@
+---
+- name: install utility packages
+  become_user: root
+  pacman:
+    name:
+      - thunar
+      - dtrx

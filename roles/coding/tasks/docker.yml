@@ -1,0 +1,9 @@
+---
+- name: install audio packages
+  become_user: root
+  pacman:
+    name:
+      - docker
+      - docker-compose
+      - docker-machine
+      - docker-scan

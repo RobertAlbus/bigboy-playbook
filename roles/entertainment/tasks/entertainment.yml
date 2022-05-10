@@ -1,0 +1,6 @@
+---
+- name: install gaming and entertainment packages
+  become_user: root
+  pacman:
+    name:
+      - steam-manjaro

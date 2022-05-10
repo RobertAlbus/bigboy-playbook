@@ -1,0 +1,6 @@
+---
+- name: install misc packages
+  become_user: root
+  pacman:
+    name:
+      - google-chrome

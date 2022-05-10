@@ -1,0 +1,11 @@
+---
+- name: install coding packages
+  become_user: root
+  pacman:
+    name:
+      - rustup
+      - nodejs
+      - code
+      - neovim
+      - chuck-jack
+      - faust
