@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars_files: user_vars.yml
+  become: yes
+  become_user: "{{ username }}"
+  roles:
+    - coding
+    - audio
+    - util
+    - comms
+    - entertainment
+    - misc
+    - configs
