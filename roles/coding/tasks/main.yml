@@ -1,3 +1,2 @@
 ---
-- import tasks: coding.yml
-- import tasks: docker.yml
+- import_tasks: coding.yml

@@ -1,2 +1,2 @@
 ---
-- import tasks: comms.yml
+- import_tasks: comms.yml

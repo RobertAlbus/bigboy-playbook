@@ -1,2 +1,2 @@
 ---
-- import tasks: audio.yml
+- import_tasks: audio.yml

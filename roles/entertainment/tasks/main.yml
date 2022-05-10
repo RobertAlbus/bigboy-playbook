@@ -1,2 +1,2 @@
 ---
-- import tasks: entertainment.yml
+- import_tasks: entertainment.yml

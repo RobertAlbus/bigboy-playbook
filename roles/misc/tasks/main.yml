@@ -1,2 +1,2 @@
 ---
-- import tasks: misc.yml
+- import_tasks: misc.yml

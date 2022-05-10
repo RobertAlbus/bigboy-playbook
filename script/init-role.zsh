@@ -8,7 +8,7 @@ for role ($roles); do
     
     role_main_yml=roles/$role/tasks/main.yml
     if [ ! -f $role_main_yml ]; then
-        echo "---"$'\n'"- import tasks: $role.yml" > $role_main_yml;
+        echo "---"$'\n'"- import_tasks: $role.yml" > $role_main_yml;
     fi
     
     touch roles/$role/tasks/$role.yml

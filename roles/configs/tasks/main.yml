@@ -1,2 +1,2 @@
 ---
-- import tasks: configs.yml
+- import_tasks: configs.yml
