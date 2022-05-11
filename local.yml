@@ -3,6 +3,7 @@
   become: yes
   become_user: "{{ username }}"
   roles:
+    - shell
     - coding
     - audio
     - util
