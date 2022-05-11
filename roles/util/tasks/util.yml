@@ -6,5 +6,11 @@
       - thunar
       - unzip
       - numlockx
-- name: install utility packages from AUR
+- name: check if dtrx is installed
+  shell: pacman -Qi dtrx
+  register: dtrx_installed
+  changed_when: False
+  ignore_errors: yes
+- name: install dtrx from AUR
   ansible.builtin.command: yay -S dtrx --noconfirm
+  when: dtrx_installed.rc == 1

@@ -4,7 +4,14 @@
   pacman:
     name:
       - rustup
+- name: check if a rust toolchain is installed and configured
+  shell: rustup default
+  register: rust_stable_configured
+  changed_when: false
+  ignore_errors: true
 - name: install rust stable
   command: rustup install stable
+  when: "{{rust_stable_configured.failed}}"
 - name: set rust stable as default
   command: rustup default stable
+  when: "{{rust_stable_configured.failed}}"
