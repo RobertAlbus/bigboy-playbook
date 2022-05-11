@@ -3,6 +3,7 @@
   become_user: root
   pacman:
     name:
+      - npm
       - nodejs
       - code
       - neovim
