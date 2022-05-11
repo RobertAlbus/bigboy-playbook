@@ -5,3 +5,6 @@
     name:
       - thunar
       - unzip
+      - numlockx
+- name: install utility packages from AUR
+  ansible.builtin.command: yay -S dtrx --noconfirm

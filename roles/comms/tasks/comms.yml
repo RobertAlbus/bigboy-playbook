@@ -5,4 +5,5 @@
     name:
       - discord
       - signal-desktop
-      # - slack-desktop # cannot install AUR packages easily with ansible
+- name: install communications packages from AUR
+  ansible.builtin.command: yay -S slack-desktop --noconfirm
