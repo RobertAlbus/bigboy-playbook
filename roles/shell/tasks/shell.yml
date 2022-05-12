@@ -16,3 +16,16 @@
     path: "{{ playbook_dir }}/tmp/zsh-installer.sh"
     state: absent
   when: not omz_folder.stat.exists
+
+# custom zsh plugins
+- name: check which custom zsh plugins are installed
+  shell: ls ~/.oh-my-zsh/custom/plugins
+  register: zsh_custom_plugins
+  changed_when: false
+- name: install zsh-autosuggestions
+  when: "'zsh-autosuggestions' not in zsh_custom_plugins.stdout_lines"
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions
+    dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    clone: yes
+    update: yes
