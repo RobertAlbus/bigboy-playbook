@@ -1,0 +1,6 @@
+- name: link configs for gitconfig
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/misc/mimeapps.list"
+    path: ~/.config/mimeapps.list
+    state: link
