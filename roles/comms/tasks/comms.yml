@@ -11,5 +11,5 @@
   changed_when: False
   ignore_errors: yes
 - name: install slack-desktop from AUR
-  ansible.builtin.command: yay -S dtrx --noconfirm
+  ansible.builtin.command: yay -S slack-desktop --noconfirm
   when: slack_installed.rc == 1
