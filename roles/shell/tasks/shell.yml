@@ -1,3 +1,18 @@
 ---
-- name: install ohmyzsh
-  ansible.builtin.command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+- name: check if ohmyzsh is installed
+  stat:
+    path: ~/.oh-my-zsh
+  register: omz_folder
+- name: download zsh installer
+  get_url: 
+    url: https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    dest: "{{ playbook_dir }}/tmp/zsh-installer.sh"
+  when: not omz_folder.stat.exists 
+- name: execute zsh-installer.sh
+  command: " /bin/bash {{ playbook_dir }}/tmp/zsh-installer.sh"
+  when: not omz_folder.stat.exists
+- name: remove zsh-installer.sh
+  file: 
+    path: "{{ playbook_dir }}/tmp/zsh-installer.sh"
+    state: absent
+  when: not omz_folder.stat.exists
