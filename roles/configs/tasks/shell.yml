@@ -1,0 +1,19 @@
+---
+- name: link configs for dir_colors
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/shell/dir_colors"
+    dest: ~/.symlinkrc
+    state: link
+- name: link configs for profile
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/shell/profile"
+    dest: ~/.profile
+    state: link
+- name: link configs for zshrc
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/shell/zshrc"
+    dest: ~/.zshrc
+    state: link

@@ -1,2 +1,3 @@
 ---
 username: ra
+dotfiles_dir: "{{playbook_dir}}/dotfiles"

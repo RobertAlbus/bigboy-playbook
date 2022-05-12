@@ -1,0 +1,18 @@
+- name: link configs for gitconfig
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/git/gitconfig"
+    path: ~/.gitconfig
+    state: link
+- name: link configs for gitconfig_ra
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/git/gitconfig_ra"
+    path: ~/.gitconfig_ra
+    state: link
+- name: link configs for gitconfig_kto
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/git/gitconfig_kto"
+    path: ~/.gitconfig_kto
+    state: link

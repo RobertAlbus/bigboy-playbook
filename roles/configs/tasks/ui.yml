@@ -1,0 +1,28 @@
+- name: link configs for lightdm
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    force: yes
+    src: "{{dotfiles_dir}}/ui/lightdm"
+    path: /etc/lightdm/lightdm.conf
+    state: link
+- name: link configs for slick-greeter
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    force: yes
+    src: "{{dotfiles_dir}}/ui/slick-greeter"
+    path: /etc/lightdm/slick-greeter.conf
+    state: link
+- name: link configs for i3 
+  ansible.builtin.file:
+    force: yes
+    src: "{{dotfiles_dir}}/ui/i3"
+    path: ~/.i3/config
+    state: link
+- name: link configs for dmenu 
+  ansible.builtin.file:
+    force: yes
+    src: "{{dotfiles_dir}}/ui/dmenurc"
+    path: ~/.dmenurc
+    state: link

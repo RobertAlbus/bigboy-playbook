@@ -1,0 +1,6 @@
+- name: link configs for npmrc
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/npm/npmrc"
+    dest: ~/.npmrc
+    state: link
