@@ -1,0 +1,11 @@
+[init]
+	defaultBranch = main
+[include]
+	path = .gitconfig_ra
+[includeIf "gitdir:~/code/kto/"]
+	path = .gitconfig_kto
+
+[rebase]
+	autoSquash = true
+[submodule]
+	recurse = true
