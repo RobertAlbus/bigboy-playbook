@@ -26,3 +26,9 @@
     src: "{{dotfiles_dir}}/ui/dmenurc"
     path: ~/.dmenurc
     state: link
+- name: link .xinitrc 
+  ansible.builtin.file:
+    force: yes
+    src: "{{dotfiles_dir}}/ui/xinitrc"
+    path: ~/.xinitrc
+    state: link
