@@ -8,3 +8,8 @@
       - pulseaudio-jack
       - cadence
       - qjackctl
+- name: add user {{ user }} to audio group
+  user:
+    name: "{{ username }}"
+    groups: audio
+    append: yes
