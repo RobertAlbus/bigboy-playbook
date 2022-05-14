@@ -92,6 +92,9 @@ alias dochuck="cd ~/code/ra/chuck && code ."
 alias chucksource="cd ~/code/ra/chuck-source && code ."
 alias "git init"='git init && git commit --allow-empty -m "Initial commit"' 
 
+alias rustrax="cd ~/code/rust/rust-trax && code ."
+alias bigboy="cd ~/code/ra/bigboy-playbook && code ."
+
 # custom bindings
 bindkey '^H' backward-kill-word
 # history-substring-search plugin bindings
