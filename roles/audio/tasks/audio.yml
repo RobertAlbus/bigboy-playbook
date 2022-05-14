@@ -13,3 +13,17 @@
     name: "{{ username }}"
     groups: audio
     append: yes
+- name: Add realtime permissions for audio group
+  become: true
+  become_user: root
+  lineinfile:
+    path: /etc/security/limits.conf
+    line: "@audio  -   rtprio      95"
+    insertbefore: '# End of file'
+- name: Add unlimited memlock for audio group
+  become: true
+  become_user: root
+  lineinfile:
+    path: /etc/security/limits.conf
+    line: "@audio  -   memlock     unlimited"
+    insertbefore: '# End of file'
