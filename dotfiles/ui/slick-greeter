@@ -32,7 +32,7 @@
 # stretch-background-across-monitors=Whether to stretch the background across multiple monitors (false by default)
 # clock-format=What clock format to use (e.g., %H:%M or %l:%M %p)
 [Greeter]
-background=/usr/share/backgrounds/i3_default_background.jpg
+background=/usr/share/backgrounds/dan-meyers-0AgtPoAARtE-unsplash.jpg
 background-color=#2e3d44
 draw-grid=false
 theme-name=Adapta-Nokto-Eta-Maia
