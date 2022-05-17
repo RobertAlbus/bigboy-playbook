@@ -6,6 +6,7 @@
       - thunar
       - unzip
       - numlockx
+      - flameshot
 - name: check if dtrx is installed
   shell: pacman -Qi dtrx
   register: dtrx_installed

@@ -4,3 +4,9 @@
     src: "{{playbook_dir}}/dotfiles/misc/mimeapps.list"
     path: ~/.config/mimeapps.list
     state: link
+- name: link configs flameshot screenshot util
+  ansible.builtin.file:
+    force: yes
+    src: "{{playbook_dir}}/dotfiles/misc/flameshot.ini"
+    path: ~/.config/flameshot.ini
+    state: link
