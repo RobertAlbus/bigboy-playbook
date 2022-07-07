@@ -12,6 +12,14 @@
       - carla
       - ladspa
       # aur/vst2sdk
+- name: check if reaper-bin is installed
+  shell: pacman -Qi reaper-bin
+  register: reaper_installed
+  changed_when: False
+  ignore_errors: yes
+- name: install reaper-bin from AUR
+  ansible.builtin.command: yay -S reaper-bin --noconfirm
+  when: reaper_installed.rc == 1
 - name: add user {{ username }} to audio group
   become_user: root
   user:
