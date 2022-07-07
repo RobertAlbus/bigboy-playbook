@@ -6,6 +6,8 @@
     src: "{{dotfiles_dir}}/ui/lightdm"
     path: /etc/lightdm/lightdm.conf
     state: link
+    group: ra
+    owner: ra
 - name: link configs for slick-greeter
   become: true
   become_user: root
@@ -31,4 +33,18 @@
     force: yes
     src: "{{dotfiles_dir}}/ui/xinitrc"
     path: ~/.xinitrc
+    state: link
+- name: add _script folder to bin
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    path: /usr/bin/_script
+    state: directory
+- name: link screen layout 
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    force: yes
+    src: "{{dotfiles_dir}}/screenlayout/default.sh"
+    path: /usr/bin/_script/screenlayout.sh
     state: link

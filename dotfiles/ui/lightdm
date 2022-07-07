@@ -121,8 +121,8 @@ session-wrapper=/etc/lightdm/Xsession
 #display-setup-script=
 #display-stopped-script=
 
-### greeter-setup-script=/usr/bin/_script/screenlayout.sh
-### session-setup-script=/usr/bin/_script/screenlayout.sh
+greeter-setup-script=/bin/_script/screenlayout.sh
+session-setup-script=/bin/_script/screenlayout.sh
 
 #session-cleanup-script=
 #autologin-guest=false
