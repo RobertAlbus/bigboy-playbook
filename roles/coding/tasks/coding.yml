@@ -9,3 +9,13 @@
       - neovim
       - chuck
       - faust
+      - cmake
+- name: check for c++ extension in vs code
+  command: code --list-extensions
+  changed_when: False
+  register: vscode_extensions
+# - debug: msg="{{ vscode_extensions }}"
+- name: install vs code extension
+  when: "'ms-vscode.cpptools' not in vscode_extensions.stdout_lines"
+  command: code --install-extension {{playbook_dir}}/roles/coding/tasks/ms-vscode.cpptools-1.10.5@linux-x64.vsix
+# handle cpp config for source dirs that include juce dir

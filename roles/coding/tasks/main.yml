@@ -1,3 +1,4 @@
 ---
 - import_tasks: coding.yml
+- import_tasks: docker.yml
 - import_tasks: rust.yml

@@ -7,3 +7,13 @@
       - docker-compose
       - docker-machine
       - docker-scan
+- name: Ensure group "docker" exists
+  ansible.builtin.group:
+    name: docker
+    state: present
+- name: Add the user to `docker` group
+  become_user: root
+  ansible.builtin.user:
+    name: "{{username}}"
+    groups: docker
+    append: yes
