@@ -8,6 +8,10 @@
       - pulseaudio-jack
       - cadence
       - qjackctl
+      - juce-docs #should probably be in a dev tooling role
+      - carla
+      - ladspa
+      # aur/vst2sdk
 - name: add user {{ username }} to audio group
   become_user: root
   user:
