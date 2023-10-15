@@ -88,6 +88,9 @@ complete -C $(which aws_completer) aws
 
 ########
 # RA 
+
+alias sshh="eval `ssh-agent` ssh-add ~/.ssh/keys/gh_ra"
+
 alias dochuck="cd ~/code/ra/chuck && code ."
 alias chucksource="cd ~/code/ra/chuck-source && code ."
 alias "git init"='git init && git commit --allow-empty -m "Initial commit"' 
